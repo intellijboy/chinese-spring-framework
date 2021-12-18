@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="intellijBoy" class="cn.intellijboy.demo.domain.Employ">
+		<property name="empno" value="1001"/>
+		<property name="ename" value="intellijboy"/>
+		<property name="job" value="高级开发工程师"/>
+		<property name="comm" value="36000.00"/>
+		<property name="sal" value="15500"/>
+		<property name="mgr" value="100"/>
+	</bean>
+
+</beans>
