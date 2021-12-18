@@ -13,11 +13,24 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo.factory;/**
+package cn.intellijboy.demo.factory;
+
+import cn.intellijboy.demo.domain.Employ;
+
+/**
  * 描述：方法工厂
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
 public class MethodFactory {
+	/**
+	 * 普通工厂方法
+	 *
+	 * @return 返回对象
+	 */
+	public Employ getIntelliJBoy() {
+		return new Employ().setEname("intelliJBoy");
+	}
+
 }

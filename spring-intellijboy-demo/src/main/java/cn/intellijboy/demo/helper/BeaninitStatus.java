@@ -13,11 +13,14 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo.helper;/**
+package cn.intellijboy.demo.helper;
+
+/**
  * 描述：bean初始化状态、
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
 public class BeaninitStatus {
+	public static boolean isloaded = false;
 }

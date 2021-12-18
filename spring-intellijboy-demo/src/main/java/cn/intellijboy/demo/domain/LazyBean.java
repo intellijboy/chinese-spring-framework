@@ -15,11 +15,22 @@
  */
 package cn.intellijboy.demo.domain;
 
+import cn.intellijboy.demo.helper.BeaninitStatus;
+import lombok.Data;
+
 /**
  * 描述：懒加载Bean
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
+@Data
 public class LazyBean {
+
+
+	public LazyBean() {
+		BeaninitStatus.isloaded = true;
+		System.out.println("懒加载Bean初始化");
+	}
+
 }

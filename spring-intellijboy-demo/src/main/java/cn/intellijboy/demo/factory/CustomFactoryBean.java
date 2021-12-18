@@ -13,11 +13,25 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo.factory;/**
+package cn.intellijboy.demo.factory;
+
+import cn.intellijboy.demo.domain.Employ;
+import org.springframework.beans.factory.FactoryBean;
+
+/**
  * 描述：自定义工厂Bean
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
-public class CustomFactoryBean {
+public class CustomFactoryBean implements FactoryBean<Employ> {
+	@Override
+	public Employ getObject() {
+		return new Employ().setEname("intellijboy");
+	}
+
+	@Override
+	public Class<?> getObjectType() {
+		return Employ.class;
+	}
 }

@@ -13,11 +13,55 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo.domain;/**
+package cn.intellijboy.demo.domain;
+
+import lombok.Data;
+import lombok.ToString;
+import lombok.experimental.Accessors;
+
+import java.time.LocalDate;
+
+/**
  * 描述：员工实体
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
+@Data
+@Accessors(chain = true)
+@ToString
 public class Employ {
+	/**
+	 * 员工编号
+	 */
+	private String empno;
+	/**
+	 * 员工姓名
+	 */
+	private String ename;
+	/**
+	 * 员工工作
+	 */
+	private String job;
+	/**
+	 * 经理
+	 */
+	private String mgr;
+	/**
+	 * 雇佣日期
+	 */
+	private LocalDate hiredate;
+	/**
+	 * 薪水
+	 */
+	private double sal;
+	/**
+	 * 奖金
+	 */
+	private double comm;
+	/**
+	 * 部门编号
+	 */
+	private String deptno;
+
 }

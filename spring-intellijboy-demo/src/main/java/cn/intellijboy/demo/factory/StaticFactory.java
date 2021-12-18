@@ -13,11 +13,25 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo.factory;/**
- * 描述：静态工程
+package cn.intellijboy.demo.factory;
+
+import cn.intellijboy.demo.domain.Employ;
+
+/**
+ * 描述：静态工厂
  *
  * @author IntelliJBoy
  * @since jdk1.8
  */
 public class StaticFactory {
+
+	/**
+	 * 静态工厂方法
+	 *
+	 * @return 返回对象
+	 */
+	public static Employ getIntelliJBoy() {
+		return new Employ().setEname("intelliJBoy");
+	}
+
 }

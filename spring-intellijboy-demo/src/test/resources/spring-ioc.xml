@@ -3,7 +3,8 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="intellijBoy" class="cn.intellijboy.demo.domain.Employ">
+	<!--单例Bean-->
+	<bean id="singletonBean" class="cn.intellijboy.demo.domain.Employ">
 		<property name="empno" value="1001"/>
 		<property name="ename" value="intellijboy"/>
 		<property name="job" value="高级开发工程师"/>
@@ -11,5 +12,29 @@
 		<property name="sal" value="15500"/>
 		<property name="mgr" value="100"/>
 	</bean>
+
+	<!--多例bean-->
+	<bean id="prototypeBean" class="cn.intellijboy.demo.domain.Employ" scope="prototype">
+		<property name="empno" value="1001"/>
+		<property name="ename" value="intellijboy"/>
+		<property name="job" value="高级开发工程师"/>
+		<property name="comm" value="36000.00"/>
+		<property name="sal" value="15500"/>
+		<property name="mgr" value="100"/>
+	</bean>
+
+	<!--静态工厂bean-->
+	<bean id="staticFactoryBean" class="cn.intellijboy.demo.factory.StaticFactory" factory-method="getIntelliJBoy"
+		  scope="singleton"/>
+
+	<!--方法工厂-->
+	<bean id="methodFactoryBean" class="cn.intellijboy.demo.factory.MethodFactory"/>
+	<bean id="methodFactory" factory-bean="methodFactoryBean" factory-method="getIntelliJBoy"/>
+
+	<!--实现 FactoryBean<Employ> 接口-->
+	<bean id="customFactoryBean" class="cn.intellijboy.demo.factory.CustomFactoryBean"/>
+
+	<!--单例Bean-->
+	<bean id="lazyBean" class="cn.intellijboy.demo.domain.LazyBean" lazy-init="true"/>
 
 </beans>
