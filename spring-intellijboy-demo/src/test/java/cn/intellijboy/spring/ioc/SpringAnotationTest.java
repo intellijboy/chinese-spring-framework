@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package cn.intellijboy.demo;
+package cn.intellijboy.spring.ioc;
 
 import cn.intellijboy.demo.domain.Employ;
 import org.junit.jupiter.api.AfterEach;
