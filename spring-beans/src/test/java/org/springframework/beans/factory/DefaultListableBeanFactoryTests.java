@@ -3083,6 +3083,7 @@ class DefaultListableBeanFactoryTests {
 		public KnowsIfInstantiated() {
 			instantiated = true;
 		}
+
 	}
 
 

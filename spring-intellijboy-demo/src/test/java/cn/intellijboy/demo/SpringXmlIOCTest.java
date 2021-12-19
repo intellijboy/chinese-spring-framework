@@ -20,13 +20,10 @@ import cn.intellijboy.demo.domain.LazyBean;
 import cn.intellijboy.demo.factory.CustomFactoryBean;
 import cn.intellijboy.demo.helper.BeaninitStatus;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -35,12 +32,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author IntelliJBoy
  * @since jdk1.8
  */
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class SpringIOCTest {
+public class SpringXmlIOCTest {
 
-	ApplicationContext context;
+	BeanFactory context;
 
-	@BeforeAll
+	@BeforeEach
 	@DisplayName("获取IOC容器")
 	public void initIoc() {
 		context = new ClassPathXmlApplicationContext("spring-ioc.xml");
