@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Gradle</ID>
+  <OriginalElement>spring/spring.spring-web</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1063.75">spring/spring.spring-web</node>
+    <node x="694.5" y="1816.3192999053927">spring-beans</node>
+    <node x="990.5" y="1800.25">spring-core</node>
+    <node x="1295.0" y="1800.25">spring-jcl</node>
+    <node x="423.5" y="1794.3192999053927">spring-aop</node>
+    <node x="178.0" y="1833.5380794701987">spring-context</node>
+    <node x="680.5" y="1860.3192999053927">spring-expression</node>
+    <node x="422.5" y="1751.3192999053927">spring-oxm</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.wildfly.client:wildfly-client-config:1.0.1.Final" target="org.jboss.logging:jboss-logging:3.4.1.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="69.0" y="0.0" />
+      <point x="885.0" y="135.42809839167444" />
+      <point x="885.0" y="86.21877956480603" />
+      <point x="-53.5" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="com.google.guava:failureaccess:1.0.1" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="617.0" y="427.9999999999999" />
+      <point x="617.0" y="449.4999999999999" />
+      <point x="-50.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.netty:netty-handler-proxy:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="607.0" y="1429.25" />
+      <point x="607.0" y="1434.968779564806" />
+      <point x="-70.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1981.8192999053927" />
+      <point x="2067.0" y="1981.8192999053927" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlin:kotlin-reflect:1.5.31" target="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="49.5" y="0.0" />
+      <point x="1170.0" y="211.5" />
+      <point x="1170.0" y="221.71877956480603" />
+      <point x="-47.5" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="com.google.j2objc:j2objc-annotations:1.3" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="617.0" y="427.9999999999999" />
+      <point x="617.0" y="363.4999999999999" />
+      <point x="-67.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.netty:netty-resolver-dns:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="607.0" y="1429.25" />
+      <point x="607.0" y="1550.25" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.netty:netty-codec-http:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1669.75" />
+      <point x="1180.0" y="1669.75" />
+      <point x="1180.0" y="1698.4280983916744" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.squareup.okhttp3:okhttp:3.14.9" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="11.5" />
+      <point x="-32.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-resolver:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1490.0" y="1550.25" />
+      <point x="1490.0" y="1609.5" />
+      <point x="2244.0" y="1609.5" />
+      <point x="2244.0" y="1630.359981078524" />
+      <point x="-53.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-epoll:4.1.70.Final" target="io.netty:netty-transport-native-unix-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="93.0" y="0.0" />
+      <point x="1450.0" y="1352.0692999053927" />
+      <point x="1450.0" y="1331.4280983916744" />
+      <point x="-118.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-unix-common:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="118.0" y="0.0" />
+      <point x="2087.0" y="1331.4280983916744" />
+      <point x="2087.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.client5:httpclient5:5.1" target="commons-codec:commons-codec:1.15" relationship="GRADLE_DEPENDENCY">
+      <point x="43.0" y="0.0" />
+      <point x="617.0" y="988.7499999999999" />
+      <point x="617.0" y="1004.9687795648059" />
+      <point x="-61.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.projectreactor:reactor-core:3.4.12" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1342.4280983916744" />
+      <point x="-49.5" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="com.google.code.findbugs:jsr305:3.0.2" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="597.0" y="427.9999999999999" />
+      <point x="597.0" y="623.4999999999999" />
+      <point x="-30.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-socks:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1727.0" y="1429.0692999053927" />
+      <point x="1727.0" y="1413.9280983916744" />
+      <point x="2448.0" y="1413.9280983916744" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.2" target="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.2.2" relationship="GRADLE_DEPENDENCY">
+      <point x="84.5" y="0.0" />
+      <point x="-97.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpasyncclient:4.1.4" target="org.apache.httpcomponents:httpcore-nio:4.4.10" relationship="GRADLE_DEPENDENCY">
+      <point x="55.5" y="0.0" />
+      <point x="351.0" y="1238.4280983916744" />
+      <point x="351.0" y="1249.4280983916744" />
+      <point x="-49.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.netty:netty-handler:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1893.8192999053927" />
+      <point x="1450.0" y="1893.8192999053927" />
+      <point x="1450.0" y="1685.359981078524" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml.jackson.core:jackson-databind:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="2047.8192999053927" />
+      <point x="875.0" y="2047.8192999053927" />
+      <point x="875.0" y="2086.3192999053927" />
+      <point x="-63.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-unix-common:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="118.0" y="0.0" />
+      <point x="2254.0" y="1331.4280983916744" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="923.7499999999999" />
+      <point x="2254.0" y="923.7499999999999" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.2.2" target="org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.2" relationship="GRADLE_DEPENDENCY">
+      <point x="96.0" y="0.0" />
+      <point x="-84.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-buffer:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.0" y="0.0" />
+      <point x="2448.0" y="1462.2880794701987" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpasyncclient:4.1.4" target="org.apache.httpcomponents:httpclient:4.5.13" relationship="GRADLE_DEPENDENCY">
+      <point x="55.5" y="0.0" />
+      <point x="341.0" y="1238.4280983916744" />
+      <point x="341.0" y="1117.2880794701987" />
+      <point x="-39.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1757.25" />
+      <point x="1737.0" y="1757.25" />
+      <point x="1737.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.rometools:rome-utils:1.16.0" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="42.5" y="0.0" />
+      <point x="1727.0" y="836.7499999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="spring-beans" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="875.0" y="1827.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.2.2" target="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="97.0" y="0.0" />
+      <point x="1180.0" y="276.4999999999999" />
+      <point x="1180.0" y="221.71877956480603" />
+      <point x="-47.5" y="0.0" />
+    </edge>
+    <edge source="com.squareup.okhttp3:okhttp:3.14.9" target="com.squareup.okio:okio:1.17.2" relationship="GRADLE_DEPENDENCY">
+      <point x="32.0" y="0.0" />
+      <point x="-26.0" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="org.checkerframework:checker-compat-qual:2.5.5" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="617.0" y="427.9999999999999" />
+      <point x="617.0" y="406.4999999999999" />
+      <point x="-75.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-codec-http:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1200.0" y="1434.968779564806" />
+      <point x="1200.0" y="1698.4280983916744" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-client:11.0.7" target="org.eclipse.jetty:jetty-http:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="42.5" y="0.0" />
+      <point x="875.0" y="781.7499999999999" />
+      <point x="875.0" y="743.4280983916744" />
+      <point x="-39.0" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.2.2" target="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="96.0" y="0.0" />
+      <point x="587.0" y="276.4999999999999" />
+      <point x="587.0" y="243.71877956480603" />
+      <point x="1170.0" y="243.71877956480603" />
+      <point x="1170.0" y="221.71877956480603" />
+      <point x="-47.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.el:jakarta.el-api:4.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="233.5" />
+      <point x="-51.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.core5:httpcore5-reactive:5.1.1" target="org.apache.httpcomponents.core5:httpcore5:5.1.1" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="597.0" y="1074.2880794701987" />
+      <point x="597.0" y="1047.968779564806" />
+      <point x="-41.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.googlecode.protobuf-java-format:protobuf-java-format:1.4" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="2003.8192999053927" />
+      <point x="-75.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-classes-epoll:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="96.5" y="0.0" />
+      <point x="1737.0" y="1353.4280983916744" />
+      <point x="1737.0" y="1358.9280983916744" />
+      <point x="2067.0" y="1358.9280983916744" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml:aalto-xml:1.3.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1915.8192999053927" />
+      <point x="-40.0" y="0.0" />
+    </edge>
+    <edge source="spring-aop" target="spring-beans" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="597.0" y="1805.8192999053927" />
+      <point x="597.0" y="1827.8192999053927" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.google.code.gson:gson:2.8.8" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="525.4999999999999" />
+      <point x="-27.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.2.2" target="org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="96.0" y="0.0" />
+      <point x="587.0" y="276.4999999999999" />
+      <point x="587.0" y="298.4999999999999" />
+      <point x="1450.0" y="298.4999999999999" />
+      <point x="1450.0" y="286.7187795648059" />
+      <point x="-75.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-dns:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="60.0" y="0.0" />
+      <point x="1777.0" y="1495.25" />
+      <point x="1777.0" y="1506.25" />
+      <point x="2294.0" y="1506.25" />
+      <point x="2294.0" y="1555.0" />
+      <point x="2448.0" y="1555.0" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-io:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="33.0" y="0.0" />
+      <point x="1727.0" y="727.2499999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="61.0" y="0.0" />
+      <point x="1460.0" y="1698.4280983916744" />
+      <point x="1460.0" y="1631.5" />
+      <point x="1490.0" y="1631.5" />
+      <point x="1490.0" y="1626.0" />
+      <point x="1737.0" y="1626.0" />
+      <point x="1737.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.projectreactor:reactor-core:3.4.12" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="597.0" y="1429.25" />
+      <point x="597.0" y="1342.4280983916744" />
+      <point x="-49.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.undertow:undertow-core:2.2.13.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="97.5" />
+      <point x="-56.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-reactive-httpclient:3.0.4" target="org.reactivestreams:reactive-streams:1.0.3" relationship="GRADLE_DEPENDENCY">
+      <point x="79.0" y="0.0" />
+      <point x="587.0" y="814.7499999999999" />
+      <point x="587.0" y="820.2499999999999" />
+      <point x="875.0" y="820.2499999999999" />
+      <point x="875.0" y="1140.25" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-servlet:11.0.7" target="org.eclipse.jetty:jetty-security:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="46.5" y="0.0" />
+      <point x="341.0" y="590.4999999999999" />
+      <point x="341.0" y="601.4999999999999" />
+      <point x="-49.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="com.fasterxml.woodstox:woodstox-core:6.2.6" relationship="GRADLE_DEPENDENCY">
+      <point x="82.5" y="0.0" />
+      <point x="875.0" y="2025.8192999053927" />
+      <point x="875.0" y="1959.8192999053927" />
+      <point x="-57.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-classes-epoll:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="96.5" y="0.0" />
+      <point x="2448.0" y="1353.4280983916744" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.netty:netty-resolver-dns:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1664.25" />
+      <point x="1170.0" y="1664.25" />
+      <point x="1170.0" y="1550.25" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.5" y="0.0" />
+      <point x="2244.0" y="1484.25" />
+      <point x="2244.0" y="1522.0" />
+      <point x="2284.0" y="1522.0" />
+      <point x="2284.0" y="1538.25" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpclient:4.5.13" target="org.apache.httpcomponents:httpcore:4.4.13" relationship="GRADLE_DEPENDENCY">
+      <point x="39.5" y="0.0" />
+      <point x="597.0" y="1117.2880794701987" />
+      <point x="597.0" y="1215.2880794701987" />
+      <point x="-37.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-http:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="39.0" y="0.0" />
+      <point x="1180.0" y="743.4280983916744" />
+      <point x="1180.0" y="667.4999999999999" />
+      <point x="1190.0" y="667.4999999999999" />
+      <point x="1190.0" y="645.4999999999999" />
+      <point x="1727.0" y="645.4999999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="2114.5380794701987" />
+      <point x="-86.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-client:11.0.7" target="org.eclipse.jetty:jetty-io:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="42.5" y="0.0" />
+      <point x="885.0" y="781.7499999999999" />
+      <point x="885.0" y="765.4280983916744" />
+      <point x="1170.0" y="765.4280983916744" />
+      <point x="1170.0" y="727.2499999999999" />
+      <point x="-33.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="276.4999999999999" />
+      <point x="-83.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-http:11.0.7" target="org.eclipse.jetty:jetty-util:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="39.0" y="0.0" />
+      <point x="1180.0" y="743.4280983916744" />
+      <point x="1180.0" y="667.4999999999999" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="org.jboss.xnio:xnio-api:3.8.4.Final" target="org.wildfly.common:wildfly-common:1.5.2.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="36.5" y="0.0" />
+      <point x="587.0" y="162.0" />
+      <point x="587.0" y="167.92809839167444" />
+      <point x="875.0" y="167.92809839167444" />
+      <point x="875.0" y="162.0" />
+      <point x="-59.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="61.0" y="0.0" />
+      <point x="1460.0" y="1698.4280983916744" />
+      <point x="1460.0" y="1631.5" />
+      <point x="2254.0" y="1631.5" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="61.0" y="0.0" />
+      <point x="1460.0" y="1698.4280983916744" />
+      <point x="1460.0" y="1631.5" />
+      <point x="1490.0" y="1631.5" />
+      <point x="1490.0" y="1626.0" />
+      <point x="2067.0" y="1626.0" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-classes-epoll:4.1.70.Final" target="io.netty:netty-transport-native-unix-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="96.5" y="0.0" />
+      <point x="1727.0" y="1353.4280983916744" />
+      <point x="1727.0" y="1331.4280983916744" />
+      <point x="-118.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-security:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="49.5" y="0.0" />
+      <point x="587.0" y="601.4999999999999" />
+      <point x="587.0" y="645.4999999999999" />
+      <point x="1727.0" y="645.4999999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor:reactor-core:3.4.12" target="org.reactivestreams:reactive-streams:1.0.3" relationship="GRADLE_DEPENDENCY">
+      <point x="49.5" y="0.0" />
+      <point x="875.0" y="1342.4280983916744" />
+      <point x="875.0" y="1140.25" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="com.google.protobuf:protobuf-java-util:3.18.0" target="com.google.protobuf:protobuf-java:3.18.0" relationship="GRADLE_DEPENDENCY">
+      <point x="64.0" y="0.0" />
+      <point x="351.0" y="481.9999999999999" />
+      <point x="351.0" y="470.9999999999999" />
+      <point x="-53.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-handler:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1480.0" y="1550.25" />
+      <point x="1480.0" y="1685.359981078524" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-security:11.0.7" target="org.eclipse.jetty:jetty-server:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="49.5" y="0.0" />
+      <point x="587.0" y="601.4999999999999" />
+      <point x="587.0" y="645.4999999999999" />
+      <point x="597.0" y="645.4999999999999" />
+      <point x="597.0" y="694.7499999999999" />
+      <point x="-45.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1490.0" y="1550.25" />
+      <point x="1490.0" y="1587.5" />
+      <point x="2448.0" y="1587.5" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="com.fasterxml.jackson.core:jackson-databind:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="82.5" y="0.0" />
+      <point x="895.0" y="2025.8192999053927" />
+      <point x="895.0" y="2086.3192999053927" />
+      <point x="-63.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="53.0" y="0.0" />
+      <point x="2448.0" y="1630.359981078524" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="com.fasterxml.jackson.core:jackson-annotations:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="82.5" y="0.0" />
+      <point x="1180.0" y="2025.8192999053927" />
+      <point x="1180.0" y="2058.75" />
+      <point x="-71.5" y="0.0" />
+    </edge>
+    <edge source="spring-core" target="spring-jcl" relationship="GRADLE_DEPENDENCY">
+      <point x="47.0" y="0.0" />
+      <point x="-40.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns-classes-macos:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="110.5" y="0.0" />
+      <point x="1180.0" y="1293.4280983916744" />
+      <point x="1180.0" y="1281.2880794701987" />
+      <point x="2448.0" y="1281.2880794701987" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns-native-macos:4.1.70.Final" target="io.netty:netty-resolver-dns-classes-macos:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="107.0" y="0.0" />
+      <point x="-110.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.apache.tomcat.embed:tomcat-embed-core:10.0.13" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1937.8192999053927" />
+      <point x="-71.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.2.2" target="org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="97.0" y="0.0" />
+      <point x="1450.0" y="276.4999999999999" />
+      <point x="1450.0" y="286.7187795648059" />
+      <point x="-75.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" target="org.jetbrains:annotations:13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.5" y="0.0" />
+      <point x="2244.0" y="1484.25" />
+      <point x="2244.0" y="1522.0" />
+      <point x="2264.0" y="1522.0" />
+      <point x="2264.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.core5:httpcore5-h2:5.1.1" target="org.apache.httpcomponents.core5:httpcore5:5.1.1" relationship="GRADLE_DEPENDENCY">
+      <point x="50.5" y="0.0" />
+      <point x="607.0" y="1031.2880794701987" />
+      <point x="607.0" y="1047.968779564806" />
+      <point x="-41.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1490.0" y="1550.25" />
+      <point x="1490.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-epoll:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="93.0" y="0.0" />
+      <point x="1450.0" y="1352.0692999053927" />
+      <point x="1450.0" y="1375.4280983916744" />
+      <point x="2254.0" y="1375.4280983916744" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1789.75" />
+      <point x="2448.0" y="1789.75" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="spring-expression" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="65.5" y="0.0" />
+      <point x="875.0" y="1871.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-dns:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="60.0" y="0.0" />
+      <point x="1777.0" y="1495.25" />
+      <point x="1777.0" y="1462.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="1727.0" y="1685.359981078524" />
+      <point x="1727.0" y="1767.75" />
+      <point x="1747.0" y="1767.75" />
+      <point x="1747.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1220.0" y="1434.968779564806" />
+      <point x="1220.0" y="1391.9280983916744" />
+      <point x="2448.0" y="1391.9280983916744" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.0" y="0.0" />
+      <point x="2057.0" y="1528.25" />
+      <point x="2057.0" y="1560.75" />
+      <point x="2087.0" y="1560.75" />
+      <point x="2087.0" y="1582.25" />
+      <point x="2448.0" y="1582.25" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="com.rometools:rome:1.16.0" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="28.5" y="0.0" />
+      <point x="1727.0" y="858.7499999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.servlet:jakarta.servlet-api:5.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="901.7499999999999" />
+      <point x="-65.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-codec-http:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1190.0" y="1773.7880794701987" />
+      <point x="1190.0" y="1698.4280983916744" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-epoll:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="93.0" y="0.0" />
+      <point x="1450.0" y="1352.0692999053927" />
+      <point x="1450.0" y="1375.4280983916744" />
+      <point x="2067.0" y="1375.4280983916744" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="spring-context" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1845.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="661.7499999999999" />
+      <point x="-70.5" y="0.0" />
+    </edge>
+    <edge source="io.undertow:undertow-core:2.2.13.Final" target="org.jboss.threads:jboss-threads:3.1.0.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.0" y="0.0" />
+      <point x="341.0" y="97.5" />
+      <point x="341.0" y="92.42809839167444" />
+      <point x="-53.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="2180.5380794701987" />
+      <point x="587.0" y="2180.5380794701987" />
+      <point x="587.0" y="2142.0380794701987" />
+      <point x="-87.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="1727.0" y="1685.359981078524" />
+      <point x="1727.0" y="1767.75" />
+      <point x="2448.0" y="1767.75" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="spring-oxm" target="spring-beans" relationship="GRADLE_DEPENDENCY">
+      <point x="46.5" y="0.0" />
+      <point x="607.0" y="1762.8192999053927" />
+      <point x="607.0" y="1827.8192999053927" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1220.0" y="1434.968779564806" />
+      <point x="1220.0" y="1451.0692999053927" />
+      <point x="1737.0" y="1451.0692999053927" />
+      <point x="1737.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.core:jackson-annotations:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="51.0" y="0.0" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="607.0" y="2064.3192999053927" />
+      <point x="1180.0" y="2064.3192999053927" />
+      <point x="1180.0" y="2058.75" />
+      <point x="-71.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.core:jackson-annotations:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-71.5" y="0.0" />
+      <point x="1180.0" y="2058.75" />
+      <point x="1180.0" y="2064.3192999053927" />
+      <point x="607.0" y="2064.3192999053927" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="51.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.netty:netty-codec-http2:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1691.75" />
+      <point x="-64.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1740.8192999053927" />
+      <point x="875.0" y="1740.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-util:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="36.0" y="0.0" />
+      <point x="1727.0" y="667.4999999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="com.google.protobuf:protobuf-java-util:3.18.0" target="com.google.code.gson:gson:2.8.8" relationship="GRADLE_DEPENDENCY">
+      <point x="64.0" y="0.0" />
+      <point x="341.0" y="481.9999999999999" />
+      <point x="341.0" y="525.4999999999999" />
+      <point x="-27.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpcore-nio:4.4.10" target="org.apache.httpcomponents:httpcore:4.4.13" relationship="GRADLE_DEPENDENCY">
+      <point x="49.0" y="0.0" />
+      <point x="587.0" y="1249.4280983916744" />
+      <point x="587.0" y="1215.2880794701987" />
+      <point x="-37.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-unix-common:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="118.0" y="0.0" />
+      <point x="2448.0" y="1331.4280983916744" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-82.5" y="0.0" />
+      <point x="587.0" y="2025.8192999053927" />
+      <point x="587.0" y="2081.5380794701987" />
+      <point x="51.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="51.0" y="0.0" />
+      <point x="587.0" y="2081.5380794701987" />
+      <point x="587.0" y="2025.8192999053927" />
+      <point x="-82.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="spring-aop" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1805.8192999053927" />
+      <point x="-45.5" y="0.0" />
+    </edge>
+    <edge source="spring-context" target="spring-expression" relationship="GRADLE_DEPENDENCY">
+      <point x="55.0" y="0.0" />
+      <point x="351.0" y="1845.0380794701987" />
+      <point x="351.0" y="1871.8192999053927" />
+      <point x="-65.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-alpn-client:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="57.5" y="0.0" />
+      <point x="1727.0" y="787.4280983916744" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.projectreactor.tools:blockhound:1.0.6.RELEASE" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="547.4999999999999" />
+      <point x="-47.5" y="0.0" />
+    </edge>
+    <edge source="io.undertow:undertow-core:2.2.13.Final" target="org.jboss.xnio:xnio-api:3.8.4.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.0" y="0.0" />
+      <point x="341.0" y="97.5" />
+      <point x="341.0" y="162.0" />
+      <point x="-36.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler:4.1.70.Final" target="io.netty:netty-resolver:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="1727.0" y="1685.359981078524" />
+      <point x="1727.0" y="1767.75" />
+      <point x="2244.0" y="1767.75" />
+      <point x="2244.0" y="1630.359981078524" />
+      <point x="-53.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns-classes-macos:4.1.70.Final" target="io.netty:netty-resolver-dns:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="110.5" y="0.0" />
+      <point x="1210.0" y="1293.4280983916744" />
+      <point x="1210.0" y="1550.25" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.eclipse.jetty:jetty-server:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="694.7499999999999" />
+      <point x="-45.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-server:11.0.7" target="org.eclipse.jetty:jetty-io:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="895.0" y="694.7499999999999" />
+      <point x="895.0" y="678.4280983916744" />
+      <point x="1170.0" y="678.4280983916744" />
+      <point x="1170.0" y="727.2499999999999" />
+      <point x="-33.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.rometools:rome:1.16.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="858.7499999999999" />
+      <point x="-28.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-reactive-httpclient:3.0.4" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="79.0" y="0.0" />
+      <point x="1727.0" y="814.7499999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="spring-oxm" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="46.5" y="0.0" />
+      <point x="875.0" y="1762.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="749.2499999999999" />
+      <point x="-75.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.netty:netty-codec-http:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1713.75" />
+      <point x="1180.0" y="1713.75" />
+      <point x="1180.0" y="1698.4280983916744" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="spring-context" target="spring-beans" relationship="GRADLE_DEPENDENCY">
+      <point x="55.0" y="0.0" />
+      <point x="351.0" y="1845.0380794701987" />
+      <point x="351.0" y="1827.8192999053927" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="617.0" y="427.9999999999999" />
+      <point x="617.0" y="320.4999999999999" />
+      <point x="-57.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.netty:netty-transport-native-epoll:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1271.4280983916744" />
+      <point x="1170.0" y="1271.4280983916744" />
+      <point x="1170.0" y="1352.0692999053927" />
+      <point x="-93.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" target="com.fasterxml.jackson.core:jackson-databind:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="86.0" y="0.0" />
+      <point x="341.0" y="2114.5380794701987" />
+      <point x="341.0" y="2120.0380794701987" />
+      <point x="875.0" y="2120.0380794701987" />
+      <point x="875.0" y="2086.3192999053927" />
+      <point x="-63.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="189.5" />
+      <point x="1170.0" y="189.5" />
+      <point x="1170.0" y="221.71877956480603" />
+      <point x="-47.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.google.protobuf:protobuf-java-util:3.18.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="481.9999999999999" />
+      <point x="-64.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport:4.1.70.Final" target="io.netty:netty-resolver:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.5" y="0.0" />
+      <point x="2244.0" y="1484.25" />
+      <point x="2244.0" y="1522.0" />
+      <point x="2274.0" y="1522.0" />
+      <point x="2274.0" y="1630.359981078524" />
+      <point x="-53.0" y="0.0" />
+    </edge>
+    <edge source="io.reactivex.rxjava3:rxjava:3.1.3" target="org.reactivestreams:reactive-streams:1.0.3" relationship="GRADLE_DEPENDENCY">
+      <point x="30.0" y="0.0" />
+      <point x="875.0" y="1156.0692999053927" />
+      <point x="875.0" y="1140.25" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="com.rometools:rome:1.16.0" target="org.jdom:jdom2:2.0.6" relationship="GRADLE_DEPENDENCY">
+      <point x="28.5" y="0.0" />
+      <point x="341.0" y="858.7499999999999" />
+      <point x="341.0" y="891.2499999999999" />
+      <point x="-31.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.mail:jakarta.mail-api:2.0.1" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="395.4999999999999" />
+      <point x="-58.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml:aalto-xml:1.3.0" target="org.codehaus.woodstox:stax2-api:4.2.1" relationship="GRADLE_DEPENDENCY">
+      <point x="40.0" y="0.0" />
+      <point x="1170.0" y="1915.8192999053927" />
+      <point x="1170.0" y="1943.25" />
+      <point x="-39.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.core:jackson-databind:2.13.0" target="com.fasterxml.jackson.core:jackson-annotations:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="63.5" y="0.0" />
+      <point x="1190.0" y="2086.3192999053927" />
+      <point x="1190.0" y="2058.75" />
+      <point x="-71.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-client:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="42.5" y="0.0" />
+      <point x="885.0" y="781.7499999999999" />
+      <point x="885.0" y="809.4280983916744" />
+      <point x="1727.0" y="809.4280983916744" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-http:11.0.7" target="org.eclipse.jetty:jetty-io:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="39.0" y="0.0" />
+      <point x="1180.0" y="743.4280983916744" />
+      <point x="1180.0" y="667.4999999999999" />
+      <point x="1200.0" y="667.4999999999999" />
+      <point x="1200.0" y="727.2499999999999" />
+      <point x="-33.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.tomcat.embed:tomcat-embed-core:10.0.13" target="org.apache.tomcat:tomcat-annotations-api:10.0.13" relationship="GRADLE_DEPENDENCY">
+      <point x="71.5" y="0.0" />
+      <point x="-81.0" y="0.0" />
+    </edge>
+    <edge source="spring-context" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="55.0" y="0.0" />
+      <point x="351.0" y="1845.0380794701987" />
+      <point x="351.0" y="1849.8192999053927" />
+      <point x="875.0" y="1849.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1789.75" />
+      <point x="2254.0" y="1789.75" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="2025.8192999053927" />
+      <point x="-82.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2" target="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.2.2" relationship="GRADLE_DEPENDENCY">
+      <point x="83.5" y="0.0" />
+      <point x="-96.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.woodstox:woodstox-core:6.2.6" target="org.codehaus.woodstox:stax2-api:4.2.1" relationship="GRADLE_DEPENDENCY">
+      <point x="57.0" y="0.0" />
+      <point x="1170.0" y="1959.8192999053927" />
+      <point x="1170.0" y="1943.25" />
+      <point x="-39.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="spring-oxm" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1762.8192999053927" />
+      <point x="-46.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.eclipse.jetty:jetty-servlet:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="590.4999999999999" />
+      <point x="-46.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.validation:jakarta.validation-api:3.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="945.7499999999999" />
+      <point x="-74.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.codehaus.groovy:groovy:3.0.9" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1195.4280983916744" />
+      <point x="-33.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.netty:netty-handler:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="607.0" y="1429.25" />
+      <point x="607.0" y="1653.25" />
+      <point x="1450.0" y="1653.25" />
+      <point x="1450.0" y="1685.359981078524" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="com.google.guava:guava:30.1.1-android" target="com.google.errorprone:error_prone_annotations:2.5.1" relationship="GRADLE_DEPENDENCY">
+      <point x="30.5" y="0.0" />
+      <point x="607.0" y="427.9999999999999" />
+      <point x="607.0" y="503.4999999999999" />
+      <point x="-84.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-socks:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="2254.0" y="1429.0692999053927" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="86.0" y="0.0" />
+      <point x="341.0" y="2114.5380794701987" />
+      <point x="341.0" y="2081.5380794701987" />
+      <point x="-51.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-51.0" y="0.0" />
+      <point x="341.0" y="2081.5380794701987" />
+      <point x="341.0" y="2114.5380794701987" />
+      <point x="86.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-codec-socks:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1220.0" y="1434.968779564806" />
+      <point x="1220.0" y="1429.0692999053927" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.core:jackson-databind:2.13.0" target="com.fasterxml.jackson.core:jackson-core:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="63.5" y="0.0" />
+      <point x="1200.0" y="2086.3192999053927" />
+      <point x="1200.0" y="2118.75" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.client5:httpclient5:5.1" target="org.apache.httpcomponents.core5:httpcore5-h2:5.1.1" relationship="GRADLE_DEPENDENCY">
+      <point x="43.0" y="0.0" />
+      <point x="341.0" y="988.7499999999999" />
+      <point x="341.0" y="1031.2880794701987" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-handler:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1741.9280983916744" />
+      <point x="1450.0" y="1741.9280983916744" />
+      <point x="1450.0" y="1685.359981078524" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-87.5" y="0.0" />
+      <point x="597.0" y="2142.0380794701987" />
+      <point x="597.0" y="2081.5380794701987" />
+      <point x="51.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="51.0" y="0.0" />
+      <point x="597.0" y="2081.5380794701987" />
+      <point x="597.0" y="2142.0380794701987" />
+      <point x="-87.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http:4.1.70.Final" target="io.netty:netty-handler:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="61.0" y="0.0" />
+      <point x="1460.0" y="1698.4280983916744" />
+      <point x="1460.0" y="1631.5" />
+      <point x="1470.0" y="1631.5" />
+      <point x="1470.0" y="1685.359981078524" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="spring-aop" target="spring-core" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="875.0" y="1805.8192999053927" />
+      <point x="875.0" y="1811.75" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" target="com.fasterxml.jackson.core:jackson-core:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="86.0" y="0.0" />
+      <point x="341.0" y="2114.5380794701987" />
+      <point x="341.0" y="2164.0380794701987" />
+      <point x="1170.0" y="2164.0380794701987" />
+      <point x="1170.0" y="2118.75" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-dns:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="60.0" y="0.0" />
+      <point x="1777.0" y="1495.25" />
+      <point x="1777.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="io.undertow:undertow-core:2.2.13.Final" target="org.jboss.logging:jboss-logging:3.4.1.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="56.0" y="0.0" />
+      <point x="341.0" y="97.5" />
+      <point x="341.0" y="54.5" />
+      <point x="875.0" y="54.5" />
+      <point x="875.0" y="86.21877956480603" />
+      <point x="-53.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1220.0" y="1434.968779564806" />
+      <point x="1220.0" y="1451.0692999053927" />
+      <point x="2067.0" y="1451.0692999053927" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.client5:httpclient5:5.1" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="43.0" y="0.0" />
+      <point x="341.0" y="988.7499999999999" />
+      <point x="341.0" y="961.7499999999999" />
+      <point x="1727.0" y="961.7499999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="com.google.protobuf:protobuf-java-util:3.18.0" target="com.google.guava:guava:30.1.1-android" relationship="GRADLE_DEPENDENCY">
+      <point x="64.0" y="0.0" />
+      <point x="351.0" y="481.9999999999999" />
+      <point x="351.0" y="427.9999999999999" />
+      <point x="-30.5" y="0.0" />
+    </edge>
+    <edge source="com.google.protobuf:protobuf-java-util:3.18.0" target="com.google.errorprone:error_prone_annotations:2.5.1" relationship="GRADLE_DEPENDENCY">
+      <point x="64.0" y="0.0" />
+      <point x="351.0" y="481.9999999999999" />
+      <point x="351.0" y="503.4999999999999" />
+      <point x="-84.5" y="0.0" />
+    </edge>
+    <edge source="org.jboss.xnio:xnio-api:3.8.4.Final" target="org.wildfly.client:wildfly-client-config:1.0.1.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="36.5" y="0.0" />
+      <point x="587.0" y="162.0" />
+      <point x="587.0" y="135.42809839167444" />
+      <point x="-69.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.core:jackson-databind:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="51.0" y="0.0" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="607.0" y="2086.3192999053927" />
+      <point x="-63.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.core:jackson-databind:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-63.5" y="0.0" />
+      <point x="607.0" y="2086.3192999053927" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="51.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-socks:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1767.0" y="1429.0692999053927" />
+      <point x="1767.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.0" target="com.fasterxml.jackson.core:jackson-core:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="87.5" y="0.0" />
+      <point x="1170.0" y="2142.0380794701987" />
+      <point x="1170.0" y="2118.75" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="1727.0" y="1685.359981078524" />
+      <point x="1727.0" y="1767.75" />
+      <point x="2254.0" y="1767.75" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.netty:netty-resolver-dns-native-macos:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="341.0" y="1429.25" />
+      <point x="341.0" y="1293.4280983916744" />
+      <point x="-107.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.google.code.findbugs:jsr305:3.0.2" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="623.4999999999999" />
+      <point x="-30.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http2:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="1170.0" y="1691.75" />
+      <point x="1170.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1773.7880794701987" />
+      <point x="1200.0" y="1784.5380794701987" />
+      <point x="2067.0" y="1784.5380794701987" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="com.fasterxml.woodstox:woodstox-core:6.2.6" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1959.8192999053927" />
+      <point x="-57.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.0" y="0.0" />
+      <point x="2057.0" y="1528.25" />
+      <point x="2057.0" y="1560.75" />
+      <point x="2254.0" y="1560.75" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="47.0" y="0.0" />
+      <point x="2057.0" y="1528.25" />
+      <point x="2057.0" y="1560.75" />
+      <point x="2077.0" y="1560.75" />
+      <point x="2077.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpclient:4.5.13" target="commons-codec:commons-codec:1.15" relationship="GRADLE_DEPENDENCY">
+      <point x="39.5" y="0.0" />
+      <point x="587.0" y="1117.2880794701987" />
+      <point x="587.0" y="1004.9687795648059" />
+      <point x="-61.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.core5:httpcore5-reactive:5.1.1" target="org.reactivestreams:reactive-streams:1.0.3" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="607.0" y="1074.2880794701987" />
+      <point x="607.0" y="1101.968779564806" />
+      <point x="875.0" y="1101.968779564806" />
+      <point x="875.0" y="1140.25" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-server:11.0.7" target="org.eclipse.jetty:jetty-http:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="885.0" y="694.7499999999999" />
+      <point x="885.0" y="743.4280983916744" />
+      <point x="-39.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.apache.httpcomponents:httpclient:4.5.13" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1117.2880794701987" />
+      <point x="-39.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="51.5" y="0.0" />
+      <point x="1727.0" y="1685.359981078524" />
+      <point x="1727.0" y="1767.75" />
+      <point x="1757.0" y="1767.75" />
+      <point x="1757.0" y="1763.4280983916744" />
+      <point x="2067.0" y="1763.4280983916744" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.projectreactor.netty:reactor-netty-http:1.0.13" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1429.25" />
+      <point x="-64.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-servlet:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="46.5" y="0.0" />
+      <point x="341.0" y="590.4999999999999" />
+      <point x="341.0" y="579.4999999999999" />
+      <point x="1727.0" y="579.4999999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-reactive-httpclient:3.0.4" target="org.eclipse.jetty:jetty-client:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="79.0" y="0.0" />
+      <point x="587.0" y="814.7499999999999" />
+      <point x="587.0" y="781.7499999999999" />
+      <point x="-42.5" y="0.0" />
+    </edge>
+    <edge source="org.wildfly.client:wildfly-client-config:1.0.1.Final" target="org.wildfly.common:wildfly-common:1.5.2.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="69.0" y="0.0" />
+      <point x="895.0" y="135.42809839167444" />
+      <point x="895.0" y="162.0" />
+      <point x="-59.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.core:jackson-core:2.13.0" target="com.fasterxml.jackson:jackson-bom:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="-50.5" y="0.0" />
+      <point x="1170.0" y="2118.75" />
+      <point x="1170.0" y="2108.3192999053927" />
+      <point x="607.0" y="2108.3192999053927" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="51.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson:jackson-bom:2.13.0" target="com.fasterxml.jackson.core:jackson-core:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="51.0" y="0.0" />
+      <point x="607.0" y="2081.5380794701987" />
+      <point x="607.0" y="2108.3192999053927" />
+      <point x="1170.0" y="2108.3192999053927" />
+      <point x="1170.0" y="2118.75" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns-classes-macos:4.1.70.Final" target="io.netty:netty-transport-native-unix-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="110.5" y="0.0" />
+      <point x="1180.0" y="1293.4280983916744" />
+      <point x="1180.0" y="1281.2880794701987" />
+      <point x="1737.0" y="1281.2880794701987" />
+      <point x="1737.0" y="1331.4280983916744" />
+      <point x="-118.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.json.bind:jakarta.json.bind-api:2.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="54.5" />
+      <point x="-72.5" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="org.codehaus.woodstox:stax2-api:4.2.1" relationship="GRADLE_DEPENDENCY">
+      <point x="82.5" y="0.0" />
+      <point x="905.0" y="2025.8192999053927" />
+      <point x="905.0" y="2014.75" />
+      <point x="1170.0" y="2014.75" />
+      <point x="1170.0" y="1943.25" />
+      <point x="-39.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.eclipse.jetty:jetty-reactive-httpclient:3.0.4" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="814.7499999999999" />
+      <point x="-79.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-classes-epoll:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="96.5" y="0.0" />
+      <point x="2254.0" y="1353.4280983916744" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="spring-context" target="spring-aop" relationship="GRADLE_DEPENDENCY">
+      <point x="55.0" y="0.0" />
+      <point x="341.0" y="1845.0380794701987" />
+      <point x="341.0" y="1805.8192999053927" />
+      <point x="-45.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-socks:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="2067.0" y="1429.0692999053927" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.netty:netty-transport-native-epoll:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="607.0" y="1429.25" />
+      <point x="607.0" y="1364.4280983916744" />
+      <point x="1170.0" y="1364.4280983916744" />
+      <point x="1170.0" y="1352.0692999053927" />
+      <point x="-93.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-transport:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="2067.0" y="1550.25" />
+      <point x="2067.0" y="1484.25" />
+      <point x="-56.5" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents.client5:httpclient5:5.1" target="org.apache.httpcomponents.core5:httpcore5:5.1.1" relationship="GRADLE_DEPENDENCY">
+      <point x="43.0" y="0.0" />
+      <point x="341.0" y="988.7499999999999" />
+      <point x="341.0" y="999.9280983916744" />
+      <point x="607.0" y="999.9280983916744" />
+      <point x="607.0" y="1047.968779564806" />
+      <point x="-41.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-http:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="61.0" y="0.0" />
+      <point x="1460.0" y="1698.4280983916744" />
+      <point x="1460.0" y="1631.5" />
+      <point x="1490.0" y="1631.5" />
+      <point x="1490.0" y="1663.359981078524" />
+      <point x="2448.0" y="1663.359981078524" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-alpn-client:11.0.7" target="org.eclipse.jetty:jetty-io:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="57.5" y="0.0" />
+      <point x="1190.0" y="787.4280983916744" />
+      <point x="1190.0" y="727.2499999999999" />
+      <point x="-33.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.0" target="com.fasterxml.jackson.core:jackson-databind:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="87.5" y="0.0" />
+      <point x="885.0" y="2142.0380794701987" />
+      <point x="885.0" y="2086.3192999053927" />
+      <point x="-63.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-core:1.0.13" target="io.netty:netty-resolver-dns-native-macos:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="587.0" y="1429.25" />
+      <point x="587.0" y="1293.4280983916744" />
+      <point x="-107.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-codec-dns:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1490.0" y="1550.25" />
+      <point x="1490.0" y="1495.25" />
+      <point x="-60.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.apache.httpcomponents.core5:httpcore5-reactive:5.1.1" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="org.apache.httpcomponents:httpasyncclient:4.1.4" target="org.apache.httpcomponents:httpcore:4.4.13" relationship="GRADLE_DEPENDENCY">
+      <point x="55.5" y="0.0" />
+      <point x="351.0" y="1238.4280983916744" />
+      <point x="351.0" y="1227.4280983916744" />
+      <point x="587.0" y="1227.4280983916744" />
+      <point x="587.0" y="1215.2880794701987" />
+      <point x="-37.5" y="0.0" />
+    </edge>
+    <edge source="jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" target="com.sun.activation:jakarta.activation:2.0.1" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="-62.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="jakarta.faces:jakarta.faces-api:3.0.0" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1151.4280983916744" />
+      <point x="-61.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-server:11.0.7" target="org.slf4j:slf4j-api:1.7.32" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="895.0" y="694.7499999999999" />
+      <point x="895.0" y="645.4999999999999" />
+      <point x="1727.0" y="645.4999999999999" />
+      <point x="1727.0" y="731.2880794701986" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-server:11.0.7" target="org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:5.0.2" relationship="GRADLE_DEPENDENCY">
+      <point x="45.5" y="0.0" />
+      <point x="895.0" y="694.7499999999999" />
+      <point x="895.0" y="700.4280983916744" />
+      <point x="-80.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.apache.httpcomponents.client5:httpclient5:5.1" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="988.7499999999999" />
+      <point x="-43.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.jetbrains.kotlin:kotlin-reflect:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="211.5" />
+      <point x="-49.5" y="0.0" />
+    </edge>
+    <edge source="io.projectreactor.netty:reactor-netty-http:1.0.13" target="io.projectreactor.netty:reactor-netty-core:1.0.13" relationship="GRADLE_DEPENDENCY">
+      <point x="64.5" y="0.0" />
+      <point x="-66.0" y="0.0" />
+    </edge>
+    <edge source="org.jboss.threads:jboss-threads:3.1.0.Final" target="org.jboss.logging:jboss-logging:3.4.1.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="53.0" y="0.0" />
+      <point x="875.0" y="92.42809839167444" />
+      <point x="875.0" y="86.21877956480603" />
+      <point x="-53.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-codec-dns:4.1.70.Final" target="io.netty:netty-codec:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="60.0" y="0.0" />
+      <point x="1757.0" y="1495.25" />
+      <point x="1757.0" y="1528.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-resolver-dns:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="66.0" y="0.0" />
+      <point x="1490.0" y="1550.25" />
+      <point x="1490.0" y="1462.25" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="org.apache.httpcomponents:httpasyncclient:4.1.4" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1238.4280983916744" />
+      <point x="-55.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-epoll:4.1.70.Final" target="io.netty:netty-transport-classes-epoll:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="93.0" y="0.0" />
+      <point x="1450.0" y="1352.0692999053927" />
+      <point x="1450.0" y="1353.4280983916744" />
+      <point x="-96.5" y="0.0" />
+    </edge>
+    <edge source="com.rometools:rome:1.16.0" target="com.rometools:rome-utils:1.16.0" relationship="GRADLE_DEPENDENCY">
+      <point x="28.5" y="0.0" />
+      <point x="341.0" y="858.7499999999999" />
+      <point x="341.0" y="836.7499999999999" />
+      <point x="-42.5" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-handler-proxy:4.1.70.Final" target="io.netty:netty-buffer:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="70.5" y="0.0" />
+      <point x="1220.0" y="1434.968779564806" />
+      <point x="1220.0" y="1391.9280983916744" />
+      <point x="2254.0" y="1391.9280983916744" />
+      <point x="2254.0" y="1462.2880794701987" />
+      <point x="-47.0" y="0.0" />
+    </edge>
+    <edge source="com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0" target="com.fasterxml.jackson.core:jackson-core:2.13.0" relationship="GRADLE_DEPENDENCY">
+      <point x="82.5" y="0.0" />
+      <point x="905.0" y="2025.8192999053927" />
+      <point x="905.0" y="2036.8192999053927" />
+      <point x="1170.0" y="2036.8192999053927" />
+      <point x="1170.0" y="2118.75" />
+      <point x="-50.5" y="0.0" />
+    </edge>
+    <edge source="org.jetbrains.kotlin:kotlin-stdlib:1.5.31" target="org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="1460.0" y="221.71877956480603" />
+      <point x="1460.0" y="286.7187795648059" />
+      <point x="-75.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="spring-beans" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1888.3192999053927" />
+      <point x="587.0" y="1888.3192999053927" />
+      <point x="587.0" y="1827.8192999053927" />
+      <point x="-51.5" y="0.0" />
+    </edge>
+    <edge source="spring/spring.spring-web" target="io.reactivex.rxjava3:rxjava:3.1.3" relationship="GRADLE_DEPENDENCY">
+      <point x="47.5" y="0.0" />
+      <point x="121.0" y="1075.25" />
+      <point x="121.0" y="1173.4280983916744" />
+      <point x="587.0" y="1173.4280983916744" />
+      <point x="587.0" y="1156.0692999053927" />
+      <point x="-30.0" y="0.0" />
+    </edge>
+    <edge source="io.netty:netty-transport-native-epoll:4.1.70.Final" target="io.netty:netty-common:4.1.70.Final" relationship="GRADLE_DEPENDENCY">
+      <point x="93.0" y="0.0" />
+      <point x="1450.0" y="1352.0692999053927" />
+      <point x="1450.0" y="1309.4280983916744" />
+      <point x="2448.0" y="1309.4280983916744" />
+      <point x="2448.0" y="1539.0380794701987" />
+      <point x="-55.0" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-client:11.0.7" target="org.eclipse.jetty:jetty-alpn-client:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="42.5" y="0.0" />
+      <point x="885.0" y="781.7499999999999" />
+      <point x="885.0" y="787.4280983916744" />
+      <point x="-57.5" y="0.0" />
+    </edge>
+    <edge source="org.eclipse.jetty:jetty-io:11.0.7" target="org.eclipse.jetty:jetty-util:11.0.7" relationship="GRADLE_DEPENDENCY">
+      <point x="33.0" y="0.0" />
+      <point x="1450.0" y="727.2499999999999" />
+      <point x="1450.0" y="667.4999999999999" />
+      <point x="-36.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5651976374375284" showDependencies="false" x="1292.0" y="1090.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Show Borders</Category>
+  </Categories>
+  <VISIBILITY>compileClasspath</VISIBILITY>
+</Diagram>
+

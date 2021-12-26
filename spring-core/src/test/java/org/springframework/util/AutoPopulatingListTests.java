@@ -16,12 +16,11 @@
 
 package org.springframework.util;
 
-import java.util.ArrayList;
-
 import org.junit.jupiter.api.Test;
-
 import org.springframework.core.testfixture.io.SerializationTestUtils;
 import org.springframework.tests.sample.objects.TestObject;
+
+import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,7 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Rob Harrop
  * @author Juergen Hoeller
  */
-class AutoPopulatingListTests {
+class AutopopulatingListTests {
 
 	@Test
 	void withClass() throws Exception {

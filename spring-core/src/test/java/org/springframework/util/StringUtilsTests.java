@@ -16,12 +16,12 @@
 
 package org.springframework.util;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Locale;
 import java.util.Properties;
-
-import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
@@ -385,6 +385,7 @@ class StringUtilsTests {
 	void cleanPath() {
 		assertThat(StringUtils.cleanPath("mypath/myfile")).isEqualTo("mypath/myfile");
 		assertThat(StringUtils.cleanPath("mypath\\myfile")).isEqualTo("mypath/myfile");
+		assertThat(StringUtils.cleanPath("mypath\\myfile\\\\xxx/fdasfd")).isEqualTo("mypath/myfile//xxx/fdasfd");
 		assertThat(StringUtils.cleanPath("mypath/../mypath/myfile")).isEqualTo("mypath/myfile");
 		assertThat(StringUtils.cleanPath("mypath/myfile/../../mypath/myfile")).isEqualTo("mypath/myfile");
 		assertThat(StringUtils.cleanPath("../mypath/myfile")).isEqualTo("../mypath/myfile");

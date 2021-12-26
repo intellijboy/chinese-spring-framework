@@ -43,5 +43,6 @@ The Spring Framework is released under version 2.0 of the [Apache License](https
 | ------------------------------------------------------------ |
 | [Spring 源码第 8 篇，各种属性的解析](https://mp.weixin.qq.com/s?src=11&timestamp=1639917635&ver=3506&signature=YQ1*ZajJoyBL1xi-hqNp6LZBE7vPpOMzs141VDMOFj4pXSXm9OdJAXuSsmclH8BTZbPEuJt389ThUy3vZj41*0qxj021vTxsicOUxV8AuJ6cCWCCEuHg32xluDSni*ci&new=1) |
 | [Spring源码相关问题](https://blog.csdn.net/SeanTandol/article/details/109805694) |
+| [Github Spring中文参考手册](http://dl2.kerwin.cn:8062/csdn/key/b1c45767c65e52d2-15136525/auth/1640101426-2021122202434629-0-2db5d9d39db66f19bf4312ed1aba159d) |
 |                                                              |
 
