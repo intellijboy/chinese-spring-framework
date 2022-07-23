@@ -3,6 +3,7 @@
 
 <beans>
 
+	<!-- 简单的多例 TestBean -->
 	<bean id="test3" class="org.springframework.beans.testfixture.beans.TestBean" scope="prototype">
 		<property name="name"><value>custom</value></property>
 		<property name="age"><value>25</value></property>

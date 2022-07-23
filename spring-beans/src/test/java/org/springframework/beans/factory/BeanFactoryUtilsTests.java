@@ -248,25 +248,35 @@ public class BeanFactoryUtilsTests {
 
 	@Test
 	public void testHierarchicalResolutionWithOverride() {
+		// 名称				scope		BeanFactory			加载类型			所属容器
+		// test3		 	多例				否				立即加载			leaf
+		// test				单例				否				立即加载			middle（覆盖了root中的test）
+		// testFactory1  	单例				是				懒加载			middle
+		// testFactory2	  	多例				是				懒加载			middle
+
 		Object test3 = this.listableBeanFactory.getBean("test3");
 		Object test = this.listableBeanFactory.getBean("test");
 
+		// 获取不限scope，且立即加载的Bean
 		Map<String, ?> beans =
 				BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, ITestBean.class, true, false);
 		assertThat(beans.size()).isEqualTo(2);
 		assertThat(beans.get("test3")).isEqualTo(test3);
 		assertThat(beans.get("test")).isEqualTo(test);
 
+		// 获取单例类型，且立即加载的Bean
 		beans = BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, ITestBean.class, false, false);
 		assertThat(beans.size()).isEqualTo(1);
 		assertThat(beans.get("test")).isEqualTo(test);
 
+		// 获取单例类型，不限加载类型的Bean
 		beans = BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, ITestBean.class, false, true);
 		Object testFactory1 = this.listableBeanFactory.getBean("testFactory1");
 		assertThat(beans.size()).isEqualTo(2);
 		assertThat(beans.get("test")).isEqualTo(test);
 		assertThat(beans.get("testFactory1")).isEqualTo(testFactory1);
 
+		// 获取不限scope，不限加载类型的Bean
 		beans = BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, ITestBean.class, true, true);
 		assertThat(beans.size()).isEqualTo(4);
 		assertThat(beans.get("test3")).isEqualTo(test3);
@@ -275,11 +285,13 @@ public class BeanFactoryUtilsTests {
 		boolean condition = beans.get("testFactory2") instanceof TestBean;
 		assertThat(condition).isTrue();
 
+		// 获取不限scope，不限加载类型的 DummyFactory 类型Bean
 		beans = BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, DummyFactory.class, true, true);
 		assertThat(beans.size()).isEqualTo(2);
 		assertThat(beans.get("&testFactory1")).isEqualTo(this.listableBeanFactory.getBean("&testFactory1"));
 		assertThat(beans.get("&testFactory2")).isEqualTo(this.listableBeanFactory.getBean("&testFactory2"));
 
+		// 获取不限scope，不限加载类型的 FactoryBean 类型Bean
 		beans = BeanFactoryUtils.beansOfTypeIncludingAncestors(this.listableBeanFactory, FactoryBean.class, true, true);
 		assertThat(beans.size()).isEqualTo(2);
 		assertThat(beans.get("&testFactory1")).isEqualTo(this.listableBeanFactory.getBean("&testFactory1"));
@@ -295,11 +307,12 @@ public class BeanFactoryUtilsTests {
 
 	@Test
 	public void testHierarchicalNamesForAnnotationWithMatchOnlyInRoot() {
+		// 从容器中获取带有 TestAnnotation 注解的Bean，自容器中没有会去父容器中查找
 		List<String> names = Arrays.asList(
 				BeanFactoryUtils.beanNamesForAnnotationIncludingAncestors(this.listableBeanFactory, TestAnnotation.class));
 		assertThat(names.size()).isEqualTo(1);
 		assertThat(names.contains("annotatedBean")).isTrue();
-		// Distinguish from default ListableBeanFactory behavior
+		// 只是从子容器中获取
 		assertThat(listableBeanFactory.getBeanNamesForAnnotation(TestAnnotation.class).length == 0).isTrue();
 	}
 
@@ -316,18 +329,21 @@ public class BeanFactoryUtilsTests {
 
 	@Test
 	public void testADependencies() {
+		// 获取依赖 a 的 bean 名称
 		String[] deps = this.dependentBeansFactory.getDependentBeans("a");
 		assertThat(ObjectUtils.isEmpty(deps)).isTrue();
 	}
 
 	@Test
 	public void testBDependencies() {
+		// 获取依赖 b 的 bean 名称
 		String[] deps = this.dependentBeansFactory.getDependentBeans("b");
 		assertThat(Arrays.equals(new String[] { "c" }, deps)).isTrue();
 	}
 
 	@Test
 	public void testCDependencies() {
+		// 获取依赖 c 的 bean 名称
 		String[] deps = this.dependentBeansFactory.getDependentBeans("c");
 		assertThat(Arrays.equals(new String[] { "int", "long" }, deps)).isTrue();
 	}

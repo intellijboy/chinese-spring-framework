@@ -12,14 +12,16 @@
 
 	<bean id="annotatedBean" class="org.springframework.beans.testfixture.beans.AnnotatedBean"/>
 
-	<!-- Overridden by next factory -->
+	<!-- 将被 middle 子容器覆盖 -->
 	<bean id="test" class="org.springframework.beans.testfixture.beans.TestBean">
 		<property name="name"><value>custom</value></property>
 		<property name="age"><value>25</value></property>
 	</bean>
 
+	<!--单例的 BeanFactory-->
 	<bean id="testFactory1" class="org.springframework.beans.testfixture.beans.factory.DummyFactory"/>
 
+	<!--多例的 BeanFactory-->
 	<bean id="testFactory2" class="org.springframework.beans.testfixture.beans.factory.DummyFactory">
 		<property name="singleton"><value>false</value></property>
 	</bean>
