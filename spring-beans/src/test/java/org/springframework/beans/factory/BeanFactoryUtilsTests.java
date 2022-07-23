@@ -16,15 +16,8 @@
 
 package org.springframework.beans.factory;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.StaticListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -38,6 +31,12 @@ import org.springframework.cglib.proxy.NoOp;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.core.io.Resource;
 import org.springframework.util.ObjectUtils;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.core.testfixture.io.ResourceTestUtils.qualifiedResource;
@@ -64,24 +63,25 @@ public class BeanFactoryUtilsTests {
 
 	@BeforeEach
 	public void setup() {
-		// Interesting hierarchical factory to test counts.
-
+		// Spring容器继承创建
 		DefaultListableBeanFactory grandParent = new DefaultListableBeanFactory();
 		new XmlBeanDefinitionReader(grandParent).loadBeanDefinitions(ROOT_CONTEXT);
 		DefaultListableBeanFactory parent = new DefaultListableBeanFactory(grandParent);
 		new XmlBeanDefinitionReader(parent).loadBeanDefinitions(MIDDLE_CONTEXT);
 		DefaultListableBeanFactory child = new DefaultListableBeanFactory(parent);
 		new XmlBeanDefinitionReader(child).loadBeanDefinitions(LEAF_CONTEXT);
+		this.listableBeanFactory = child;
 
+		// 独立的Spring工厂
 		this.dependentBeansFactory = new DefaultListableBeanFactory();
 		new XmlBeanDefinitionReader(this.dependentBeansFactory).loadBeanDefinitions(DEPENDENT_BEANS_CONTEXT);
 		dependentBeansFactory.preInstantiateSingletons();
-		this.listableBeanFactory = child;
 	}
 
 
 	@Test
 	public void testHierarchicalCountBeansWithNonHierarchicalFactory() {
+		// 静态工厂，没有父容器
 		StaticListableBeanFactory lbf = new StaticListableBeanFactory();
 		lbf.addBean("t1", new TestBean());
 		lbf.addBean("t2", new TestBean());
@@ -93,14 +93,21 @@ public class BeanFactoryUtilsTests {
 	 */
 	@Test
 	public void testHierarchicalCountBeansWithOverride() {
-		// Leaf count
+		// 叶子容器自由一个名为 "test3" 的bean
 		assertThat(this.listableBeanFactory.getBeanDefinitionCount() == 1).isTrue();
-		// Count minus duplicate
+		// root容器：something indexedBean annotatedBean test testFactory1 testFactory2
+		// middle容器：test numberTestBean
+		// leaf容器：test3
+		// 其中名为 test的bean重复了，所有只有 9-1=8 个
 		assertThat(BeanFactoryUtils.countBeansIncludingAncestors(this.listableBeanFactory) == 8).as("Should count 8 beans, not " + BeanFactoryUtils.countBeansIncludingAncestors(this.listableBeanFactory)).isTrue();
+		// 当子类和父类容器中存在相同名称 bean 时，子类的优先级高于父类容器
+		TestBean testBean = this.listableBeanFactory.getBean("test", TestBean.class);
+		assertThat(testBean.getAge() == 666);
 	}
 
 	@Test
 	public void testHierarchicalNamesWithNoMatch() {
+		// 多继承容器中均不包含 NoOp bean
 		List<String> names = Arrays.asList(
 				BeanFactoryUtils.beanNamesForTypeIncludingAncestors(this.listableBeanFactory, NoOp.class));
 		assertThat(names.size()).isEqualTo(0);
@@ -108,16 +115,21 @@ public class BeanFactoryUtilsTests {
 
 	@Test
 	public void testHierarchicalNamesWithMatchOnlyInRoot() {
+		// indexedBean 在 root 容器中，beanNamesForTypeIncludingAncestors 方法会去父容器中寻找bean
 		List<String> names = Arrays.asList(
 				BeanFactoryUtils.beanNamesForTypeIncludingAncestors(this.listableBeanFactory, IndexedTestBean.class));
 		assertThat(names.size()).isEqualTo(1);
 		assertThat(names.contains("indexedBean")).isTrue();
-		// Distinguish from default ListableBeanFactory behavior
+		// 只会在当前的 bean 容器中查找
 		assertThat(listableBeanFactory.getBeanNamesForType(IndexedTestBean.class).length == 0).isTrue();
 	}
 
 	@Test
 	public void testGetBeanNamesForTypeWithOverride() {
+		// root容器：test,testFactory1,testFactory2
+		// middle容器：test
+		// leaf容器：test3
+		// 其中 test 只会取 middle容器中的bean
 		List<String> names = Arrays.asList(
 				BeanFactoryUtils.beanNamesForTypeIncludingAncestors(this.listableBeanFactory, ITestBean.class));
 		// includes 2 TestBeans from FactoryBeans (DummyFactory definitions)
