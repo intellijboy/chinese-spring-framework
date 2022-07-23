@@ -22,6 +22,12 @@ ext {
 	}
 }
 
+repositories {
+	maven { url "https://maven.aliyun.com/repository/public" }
+	maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+	mavenCentral()
+}
+
 configure(allprojects) { project ->
 	apply plugin: "io.spring.dependency-management"
 
