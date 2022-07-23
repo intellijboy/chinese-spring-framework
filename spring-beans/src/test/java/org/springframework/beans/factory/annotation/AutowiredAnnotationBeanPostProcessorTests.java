@@ -16,35 +16,11 @@
 
 package org.springframework.beans.factory.annotation;
 
-import java.io.Serializable;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanNameAware;
@@ -74,6 +50,29 @@ import org.springframework.core.annotation.Order;
 import org.springframework.core.testfixture.io.SerializationTestUtils;
 import org.springframework.util.ReflectionUtils;
 
+import java.io.Serializable;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
@@ -93,11 +92,20 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 
 	@BeforeEach
 	public void setup() {
+		// 创建容器
 		bf = new DefaultListableBeanFactory();
+		// 向器中注入自己特殊bean，只能用于注入，而不是一个真正意义容器中的bean对象
 		bf.registerResolvableDependency(BeanFactory.class, bf);
+		//bf.registerSingleton("beanFactory", bf);
+
+		// 创建自动注入注解后置处理器,Autowired#resolveFieldValue 解析属性值时，转换器从容器对象中获取
 		bpp = new AutowiredAnnotationBeanPostProcessor();
 		bpp.setBeanFactory(bf);
+
+		// 容器中添加 Autowired 注解后置处理器
 		bf.addBeanPostProcessor(bpp);
+
+		// 添加解析 Autowired 注解的 解析器
 		bf.setAutowireCandidateResolver(new QualifierAnnotationAutowireCandidateResolver());
 		bf.setDependencyComparator(AnnotationAwareOrderComparator.INSTANCE);
 	}
@@ -108,6 +116,9 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 	}
 
 
+	/**
+	 * 非完整 bean 定义注入
+	 */
 	@Test
 	public void testIncompleteBeanDefinition() {
 		bf.registerBeanDefinition("testBean", new GenericBeanDefinition());
@@ -116,30 +127,46 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 			.withRootCauseInstanceOf(IllegalStateException.class);
 	}
 
+
+	/**
+	 * 属性注入
+	 */
 	@Test
 	public void testResourceInjection() {
+		// 创建多例 bean 定义模板
 		RootBeanDefinition bd = new RootBeanDefinition(ResourceInjectionBean.class);
 		bd.setScope(BeanDefinition.SCOPE_PROTOTYPE);
 		bf.registerBeanDefinition("annotatedBean", bd);
+
+		// 注入单例bean
 		TestBean tb = new TestBean();
 		bf.registerSingleton("testBean", tb);
 
+		// 第一次获取多例bean属性测试
 		ResourceInjectionBean bean = (ResourceInjectionBean) bf.getBean("annotatedBean");
 		assertThat(bean.getTestBean()).isSameAs(tb);
 		assertThat(bean.getTestBean2()).isSameAs(tb);
 
+		// 第二次获取多例bean属性测试
 		bean = (ResourceInjectionBean) bf.getBean("annotatedBean");
 		assertThat(bean.getTestBean()).isSameAs(tb);
 		assertThat(bean.getTestBean2()).isSameAs(tb);
 	}
 
+	/**
+	 * 父类注入
+	 */
 	@Test
 	public void testExtendedResourceInjection() {
+		// 定义父类bean，并注入
 		RootBeanDefinition bd = new RootBeanDefinition(TypedExtendedResourceInjectionBean.class);
 		bd.setScope(BeanDefinition.SCOPE_PROTOTYPE);
 		bf.registerBeanDefinition("annotatedBean", bd);
+
+		// 注入testBean
 		TestBean tb = new TestBean();
 		bf.registerSingleton("testBean", tb);
+		// 注入nestedTestBean
 		NestedTestBean ntb = new NestedTestBean();
 		bf.registerSingleton("nestedTestBean", ntb);
 
@@ -159,6 +186,8 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 		assertThat(bean.getNestedTestBean()).isSameAs(ntb);
 		assertThat(bean.getBeanFactory()).isSameAs(bf);
 
+		// 其中 BeanFactory bean 它并不是一个严格意义的标准bean对象,但在 @Autowired 时候注入的时候会优先从 resolvableDependencies 中获取并注入，
+		// 具体见（org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates）
 		String[] depBeans = bf.getDependenciesForBean("annotatedBean");
 		assertThat(depBeans.length).isEqualTo(2);
 		assertThat(depBeans[0]).isEqualTo("testBean");
