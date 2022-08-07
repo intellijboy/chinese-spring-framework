@@ -122,6 +122,7 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 	@Test
 	public void testIncompleteBeanDefinition() {
 		bf.registerBeanDefinition("testBean", new GenericBeanDefinition());
+		// BeanCreationException 为包装后的异常，原始异常为 IllegalStateException
 		assertThatExceptionOfType(BeanCreationException.class).isThrownBy(() ->
 				bf.getBean("testBean"))
 			.withRootCauseInstanceOf(IllegalStateException.class);
@@ -194,6 +195,10 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 		assertThat(depBeans[1]).isEqualTo("nestedTestBean");
 	}
 
+	/**
+	 * 继承依赖注入，集成关系：TypedExtendedResourceInjectionBean -> NonPublicResourceInjectionBean<NestedTestBean> -> ResourceInjectionBean
+	 *
+	 */
 	@Test
 	public void testExtendedResourceInjectionWithDestruction() {
 		bf.registerBeanDefinition("annotatedBean", new RootBeanDefinition(TypedExtendedResourceInjectionBean.class));
@@ -203,14 +208,22 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 
 		TestBean tb = bf.getBean("testBean", TestBean.class);
 		TypedExtendedResourceInjectionBean bean = (TypedExtendedResourceInjectionBean) bf.getBean("annotatedBean");
+		// ResourceInjectionBean 中 @Autowire 属性注入
 		assertThat(bean.getTestBean()).isSameAs(tb);
+		// ResourceInjectionBean 中 @Autowire 方法注入
 		assertThat(bean.getTestBean2()).isSameAs(tb);
+		// NonPublicResourceInjectionBean 中 @Autowire 属性注入
 		assertThat(bean.getTestBean3()).isSameAs(tb);
+		// NonPublicResourceInjectionBean 中 @Autowire 方法注入
 		assertThat(bean.getTestBean4()).isSameAs(tb);
+		// NonPublicResourceInjectionBean 中 @Autowire 方法注入（泛型参数）
 		assertThat(bean.getNestedTestBean()).isSameAs(ntb);
+		// 容器自身注入
 		assertThat(bean.getBeanFactory()).isSameAs(bf);
 
+		// 获取annotatedBean依赖的bean属性
 		assertThat(bf.getDependenciesForBean("annotatedBean")).isEqualTo(new String[] {"testBean", "nestedTestBean"});
+		// 销毁单例testBean，同时会销毁单例bean的所有依赖bean
 		bf.destroySingleton("testBean");
 		assertThat(bf.containsSingleton("testBean")).isFalse();
 		assertThat(bf.containsSingleton("annotatedBean")).isFalse();
@@ -222,6 +235,7 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 	public void testExtendedResourceInjectionWithOverriding() {
 		RootBeanDefinition annotatedBd = new RootBeanDefinition(TypedExtendedResourceInjectionBean.class);
 		TestBean tb2 = new TestBean();
+		// propertyValues 中的bean在注入时会优先
 		annotatedBd.getPropertyValues().add("testBean2", tb2);
 		bf.registerBeanDefinition("annotatedBean", annotatedBd);
 		TestBean tb = new TestBean();
@@ -249,6 +263,7 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 
 		OverriddenExtendedResourceInjectionBean bean = (OverriddenExtendedResourceInjectionBean) bf.getBean("annotatedBean");
 		assertThat(bean.getTestBean()).isSameAs(tb);
+		// 由于获取 testBean2 和 beanFactory 的方法在子类中重写了，但是没有添加 @Autowire 注解，所以未执行自动注入
 		assertThat(bean.getTestBean2()).isNull();
 		assertThat(bean.getTestBean3()).isSameAs(tb);
 		assertThat(bean.getTestBean4()).isSameAs(tb);
@@ -258,17 +273,22 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 		assertThat(bean.subInjected).isTrue();
 	}
 
+	/**
+	 * 在接口中的默认方法中添加 @Autowire 注解，
+	 */
 	@Test
 	public void testExtendedResourceInjectionWithDefaultMethod() {
 		RootBeanDefinition annotatedBd = new RootBeanDefinition(DefaultMethodResourceInjectionBean.class);
 		bf.registerBeanDefinition("annotatedBean", annotatedBd);
 		TestBean tb = new TestBean();
+		tb.setName("测试名称");
 		bf.registerSingleton("testBean", tb);
 		NestedTestBean ntb = new NestedTestBean();
 		bf.registerSingleton("nestedTestBean", ntb);
 
 		DefaultMethodResourceInjectionBean bean = (DefaultMethodResourceInjectionBean) bf.getBean("annotatedBean");
 		assertThat(bean.getTestBean()).isSameAs(tb);
+		// InterfaceWithDefaultMethod 接口中的 default 方法会自动注入（subInjected），非 default修饰的接口不会注入（testBean2）
 		assertThat(bean.getTestBean2()).isNull();
 		assertThat(bean.getTestBean3()).isSameAs(tb);
 		assertThat(bean.getTestBean4()).isSameAs(tb);
@@ -1509,6 +1529,9 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 		assertThat(testBeans.get(1)).isSameAs(bf.getBean("testBean1"));
 	}
 
+	/**
+	 * 使用自定义的注解类名作为注入属性
+	 */
 	@Test
 	public void testCustomAnnotationRequiredFieldResourceInjection() {
 		bpp.setAutowiredAnnotationType(MyAutowired.class);
@@ -1982,6 +2005,9 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 		assertThat(bean.stringRepositoryMap.get("repo")).isSameAs(repo);
 	}
 
+	/**
+	 * spring注入不光光只能够使用对象进行单例注入，而且还可以使用 List、Map 类型对象注入
+	 */
 	@Test
 	public void testGenericsBasedMethodInjection() {
 		RootBeanDefinition bd = new RootBeanDefinition(RepositoryMethodInjectionBean.class);
@@ -2463,11 +2489,19 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 
 		public boolean subInjected = false;
 
+		/**
+		 * 重写了方法，但是没有添加 @Autowire 注解，所以将不会注入
+		 * @param testBean2
+		 */
 		@Override
 		public void setTestBean2(TestBean testBean2) {
 			super.setTestBean2(testBean2);
 		}
 
+		/**
+		 * 重写了方法，但是没有添加 @Autowire 注解，所以将不会注入
+		 * @param testBean2
+		 */
 		@Override
 		protected void initBeanFactory(BeanFactory beanFactory) {
 			this.beanFactory = beanFactory;
@@ -2482,6 +2516,10 @@ public class AutowiredAnnotationBeanPostProcessorTests {
 
 	public interface InterfaceWithDefaultMethod {
 
+		/**
+		 * 该方法不会注入
+		 * @param testBean2
+		 */
 		@Autowired
 		void setTestBean2(TestBean testBean2);
 

@@ -40,6 +40,7 @@ include "spring-webmvc"
 include "spring-websocket"
 include "framework-bom"
 include "integration-tests"
+include 'spring-intellijboy-demo'
 
 rootProject.name = "spring"
 rootProject.children.each {project ->
@@ -60,5 +61,4 @@ settings.gradle.projectsLoaded {
 		}
 	}
 }
-include 'spring-intellijboy-demo'
 

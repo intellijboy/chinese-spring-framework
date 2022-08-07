@@ -30,7 +30,9 @@ public class MethodFactory {
 	 * @return 返回对象
 	 */
 	public Employ getIntelliJBoy() {
-		return new Employ().setEname("intelliJBoy");
+		Employ employ = new Employ();
+		employ.setEname("intelliJBoy");
+		return employ;
 	}
 
 }

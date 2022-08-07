@@ -31,7 +31,9 @@ public class StaticFactory {
 	 * @return 返回对象
 	 */
 	public static Employ getIntelliJBoy() {
-		return new Employ().setEname("intelliJBoy");
+		Employ employ = new Employ();
+		employ.setEname("intelliJBoy");
+		return employ;
 	}
 
 }

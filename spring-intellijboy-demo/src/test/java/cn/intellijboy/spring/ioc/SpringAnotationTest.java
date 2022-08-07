@@ -69,7 +69,8 @@ public class SpringAnotationTest {
 		Assertions.assertEquals("1000", definitionBean.getEmpno());
 		Assertions.assertEquals("自定义Bean", definitionBean.getEname());
 
-		Employ intellijboy = context.getBean("intellijboy", Employ.class);
+		Employ intellijboy = context.getBean(
+				"intellijboy", Employ.class);
 		Assertions.assertEquals("10086", intellijboy.getEmpno());
 		Assertions.assertEquals("intellijboy", intellijboy.getEname());
 	}
@@ -79,7 +80,10 @@ public class SpringAnotationTest {
 
 		@Bean(name = "intellijboy")
 		public Employ intellijboy() {
-			return new Employ().setEmpno("10086").setEname("intellijboy");
+			Employ employ = new Employ();
+			employ.setEmpno("10085");
+			employ.setEname("intelliJBoy");
+			return employ;
 		}
 	}
 

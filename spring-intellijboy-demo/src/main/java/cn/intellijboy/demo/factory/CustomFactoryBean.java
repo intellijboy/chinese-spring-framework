@@ -27,7 +27,9 @@ import org.springframework.beans.factory.FactoryBean;
 public class CustomFactoryBean implements FactoryBean<Employ> {
 	@Override
 	public Employ getObject() {
-		return new Employ().setEname("intellijboy");
+		Employ employ = new Employ();
+		employ.setEname("intelliJBoy");
+		return employ;
 	}
 
 	@Override

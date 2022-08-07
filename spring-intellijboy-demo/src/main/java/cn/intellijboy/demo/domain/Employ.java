@@ -15,10 +15,6 @@
  */
 package cn.intellijboy.demo.domain;
 
-import lombok.Data;
-import lombok.ToString;
-import lombok.experimental.Accessors;
-
 import java.time.LocalDate;
 
 /**
@@ -27,9 +23,6 @@ import java.time.LocalDate;
  * @author IntelliJBoy
  * @since jdk1.8
  */
-@Data
-@Accessors(chain = true)
-@ToString
 public class Employ {
 	/**
 	 * 员工编号
@@ -64,4 +57,67 @@ public class Employ {
 	 */
 	private String deptno;
 
+	public String getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(String empno) {
+		this.empno = empno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public String getMgr() {
+		return mgr;
+	}
+
+	public void setMgr(String mgr) {
+		this.mgr = mgr;
+	}
+
+	public LocalDate getHiredate() {
+		return hiredate;
+	}
+
+	public void setHiredate(LocalDate hiredate) {
+		this.hiredate = hiredate;
+	}
+
+	public double getSal() {
+		return sal;
+	}
+
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+
+	public double getComm() {
+		return comm;
+	}
+
+	public void setComm(double comm) {
+		this.comm = comm;
+	}
+
+	public String getDeptno() {
+		return deptno;
+	}
+
+	public void setDeptno(String deptno) {
+		this.deptno = deptno;
+	}
 }

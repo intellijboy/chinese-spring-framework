@@ -2,17 +2,11 @@ plugins {
     id 'java'
 }
 
-group 'org.springframework'
-version '6.0.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     api(project(":spring-context"))
-    annotationProcessor "org.projectlombok:lombok:1.18.22"
-    compileOnly "org.projectlombok:lombok:1.18.22"
+    //在jdk17中编译报错
+    //annotationProcessor "org.projectlombok:lombok:1.18.22"
+    //compileOnly "org.projectlombok:lombok:1.18.22"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
